@@ -72,22 +72,37 @@
                 <div class="col-md-4">
                     <h2 class="heading">Sobre mim</h2>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8">  
                     <p>
-                        Trabalho com programação e design de jogos e sou estudante de Design de Jogos e Entretenimento Digital na UNIVALI de Florianópolis.
+                        Tenho <text id = "age"></text> anos, trabalho com programação e design de jogos e sou estudante de Design de Jogos e Entretenimento Digital na UNIVALI de Florianópolis.
                     </p>
+                    <script>
+                        var today = new Date()
+                        var birthDate = new Date(1998, 11, 18);
+                        var givenDate = new Date(today);
+                        var years = (givenDate.getFullYear() - birthDate.getFullYear());
+                
+                        if (givenDate.getMonth() < birthDate.getMonth() ||
+                        givenDate.getMonth() == birthDate.getMonth() && givenDate.getDate() < birthDate.getDate()) {
+                            years--;
+                        }
+                
+                        document.getElementById("age").innerHTML = years;
+                    </script>
                 </div>
             </div>
         </div>
     </div>
     <!-- End #about -->
 
+    
+
     <div id="experience" class="background-alt">
         <h2 class="heading">Experiência</h2>
         <div id="experience-timeline">
             <div data-date="Agosto 2018 – Dezembro 2019">
-                <h3>GameLab - UNIVALI</h3>
-                <h4>Monitor Voluntário</h4>
+                <h3>GameLab da UNIVALI Florianópolis</h3>
+                <h4>Monitor</h4>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
                 </p>
